@@ -7,7 +7,6 @@ class Like_Comment extends StatelessWidget {
   const Like_Comment({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-
     final ui.Size screenSize = MediaQuery.of(context).size;
     final double _height = screenSize.height;
     final double _width = screenSize.width;
@@ -16,7 +15,7 @@ class Like_Comment extends StatelessWidget {
     int commentCount = Provider.of<Change>(context).commentCounter;
 
     return SizedBox(
-      height: _height*0.07,
+      height: _height * 0.07,
       child: Row(
         children: <Widget>[
           Container(
@@ -26,8 +25,7 @@ class Like_Comment extends StatelessWidget {
               child: Text(
                 "$likeCount Likes",
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: _height * 0.026),
+                    fontWeight: FontWeight.bold, fontSize: _height * 0.026),
               ),
             ),
           ),

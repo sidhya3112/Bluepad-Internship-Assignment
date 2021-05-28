@@ -4,10 +4,8 @@ import 'package:provider/provider.dart';
 import 'provider.dart';
 
 class CustomBottomAppBar extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-
     final ui.Size screenSize = MediaQuery.of(context).size;
     final double _height = screenSize.height;
     final double _width = screenSize.width;
@@ -24,7 +22,7 @@ class CustomBottomAppBar extends StatelessWidget {
               color: Colors.black,
             ),
             onPressed: () {
-              Provider.of<Change>(context,listen: false).increaseLikeCounter();
+              Provider.of<Change>(context, listen: false).increaseLikeCounter();
             },
           ),
           SizedBox(width: _width * 0.1),
@@ -34,7 +32,8 @@ class CustomBottomAppBar extends StatelessWidget {
               color: Colors.black,
             ),
             onPressed: () {
-              Provider.of<Change>(context,listen: false).increaseCommentCounter();
+              Provider.of<Change>(context, listen: false)
+                  .increaseCommentCounter();
             },
           ),
           SizedBox(width: _width * 0.1),

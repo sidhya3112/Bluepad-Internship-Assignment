@@ -40,7 +40,6 @@ class _HomePageState extends State<HomePage> {
 
     final _isVisible = Provider.of<Change>(context);
 
-
     return Scaffold(
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(_height * 0.08),
@@ -137,10 +136,11 @@ class _HomePageState extends State<HomePage> {
                   height: _height * 0.04,
                 ),
                 Container(
-                  height: _height*0.05,
+                  height: _height * 0.05,
                   child: Text(
                     "You Reached The Bottom of The Screen!",
-                    style: TextStyle(fontSize: _height * 0.025, color: Colors.grey[600]),
+                    style: TextStyle(
+                        fontSize: _height * 0.025, color: Colors.grey[600]),
                   ),
                 ),
               ],
@@ -160,14 +160,15 @@ class _HomePageState extends State<HomePage> {
 
           if (offsetToRevealBottom.offset > scroll.metrics.pixels ||
               scroll.metrics.pixels > offsetToRevealTop.offset) {
-           _isVisible.visibilityState = false;
+            _isVisible.visibilityState = false;
           } else {
-           _isVisible.visibilityState = true;
+            _isVisible.visibilityState = true;
           }
           return false;
         },
       ),
-      bottomNavigationBar: _isVisible.visibilityState ? null : CustomBottomAppBar(),
+      bottomNavigationBar:
+          _isVisible.visibilityState ? null : CustomBottomAppBar(),
     );
   }
 }

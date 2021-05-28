@@ -17,7 +17,6 @@ class Change extends ChangeNotifier {
     return visible;
   }
 
-
   void increaseLikeCounter() {
     like++;
     notifyListeners();
